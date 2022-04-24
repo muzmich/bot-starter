@@ -1,0 +1,71 @@
+{
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
+  },
+  "extends": [
+    "plugin:import/errors",
+    "plugin:import/typescript",
+    "plugin:import/warnings"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "project": "./tsconfig.json",
+    "sourceType": "module"
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "import"
+  ],
+  "rules": {
+    "max-len": [
+      "error",
+      {
+        "code": 140
+      }
+    ],
+    "@typescript-eslint/default-param-last": "error",
+    "@typescript-eslint/member-ordering": "error",
+    "@typescript-eslint/member-delimiter-style": "error",
+    "@typescript-eslint/no-extra-parens": "error",
+    "@typescript-eslint/no-require-imports": "error",
+    "@typescript-eslint/type-annotation-spacing": "error",
+    "@typescript-eslint/quotes": [
+      "error",
+      "single"
+    ],
+    "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/no-unsafe-assignment": "off",
+    "@typescript-eslint/no-unsafe-member-access": "off",
+    "@typescript-eslint/no-unsafe-return": "off",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "lines-between-class-members": "off",
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 1
+      }
+    ],
+    "class-methods-use-this": "off",
+    "no-nested-ternary": "off",
+    "no-dupe-class-members": "off",
+    "no-await-in-loop": "off",
+    "no-console": "off",
+    "no-new": "off",
+    "no-plusplus": "off",
+    "jsx-quotes": [
+      "error",
+      "prefer-single"
+    ]
+  }
+}
