@@ -1,3 +1,3 @@
-import { ServiceExample } from '../../services/serviceExample.service';
+import { ExampleService } from '../../services/example.service';
 
-export type AppServices = typeof ServiceExample
+export type AppServices = typeof ExampleService;

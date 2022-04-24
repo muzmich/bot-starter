@@ -4,15 +4,15 @@ import { BotCommandType, BotListener } from '../types/core/bot.types';
 import { ExampleCommand } from '../types/globals/commands.types';
 import BaseService from './base.service';
 
-export class ServiceExample extends BaseService {
-  private static instance: ServiceExample;
+export class ExampleService extends BaseService {
+  private static instance: ExampleService;
 
-  public static getInstance(): ServiceExample {
-    if (!ServiceExample.instance) {
-      ServiceExample.instance = new ServiceExample();
+  public static getInstance(): ExampleService {
+    if (!ExampleService.instance) {
+      ExampleService.instance = new ExampleService();
     }
 
-    return ServiceExample.instance;
+    return ExampleService.instance;
   }
 
   private async onStart(ctx: Context<Update>): Promise<void | object> {
@@ -36,11 +36,11 @@ export class ServiceExample extends BaseService {
         name: ExampleCommand.test,
         callback: (ctx) => this.onCommand(ctx)
       },
-      {
-        type: BotCommandType.ON,
-        name: 'text',
-        callback: (ctx) => this.onMessage(ctx)
-      },
+      // {
+      //   type: BotCommandType.ON,
+      //   name: 'text',
+      //   callback: (ctx) => this.onMessage(ctx)
+      // },
     ]
   }
 

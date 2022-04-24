@@ -1,8 +1,8 @@
 import App from './core/app';
-import { ServiceExample } from './services/serviceExample.service';
+import { ExampleService } from './services/example.service';
 
 const app = new App([
-  ServiceExample
+  ExampleService
 ]);
 
 app.start();
